@@ -75,7 +75,7 @@ if answer_upper == 'Y' :
             ###### YOUR CODE BELOW THIS LINE ######
             #######################################
 
-
+            print("Joey is on the scene")
 
             # First create a prompt for user input and store that input within a semantic variable 
             ### HINT: User input should be in the form of number options or a string literal of "Y" or "N"
