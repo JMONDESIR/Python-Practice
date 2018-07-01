@@ -26,13 +26,13 @@ class bcolors:
 print(bcolors.WARNING + "This is a story, and you will decide the ending" + bcolors.ENDC)
 
 ##Capture user input as name 
-name = raw_input(bcolors.OKGREEN + "--Please, tell us your name? \n" + bcolors.ENDC)
+name = input(bcolors.OKGREEN + "--Please, tell us your name? \n" + bcolors.ENDC)
 
 ##Confirm user input with greeting
 print(bcolors.OKBLUE + "--Hello, " + name + "!!! \n" + bcolors.ENDC)
 
 ##Ask and store user input into answer variable
-answer = raw_input(bcolors.OKGREEN + "--The tower pyre has gone dark, and we have no signal for aide. \n Please, "
+answer = input(bcolors.OKGREEN + "--The tower pyre has gone dark, and we have no signal for aide. \n Please, "
                    + name +
                    ", could you find it in your heart to help us poor souls and relight the signal fire? \n Y/N \n" + bcolors.ENDC)
 
@@ -49,7 +49,7 @@ if answer_upper == 'Y' :
     print(bcolors.WARNING + "--You look back at the steward of the tower, he grins softly in the dim candlelight" + bcolors.ENDC)
 
     ##Grab user input for action scenario
-    first_terrace = raw_input(bcolors.OKGREEN + "--First terrace: \n You look around a pale moonlit room. \n Cobwebs obscure your view; however, you see the shape of a chest. \n Clear a path and open the chest? \n Y/N \n" + bcolors.ENDC)
+    first_terrace = input(bcolors.OKGREEN + "--First terrace: \n You look around a pale moonlit room. \n Cobwebs obscure your view; however, you see the shape of a chest. \n Clear a path and open the chest? \n Y/N \n" + bcolors.ENDC)
 
     ##Convert user input into uppercase for typecatching evaluation
     first_terrace_upper = first_terrace.upper()
@@ -61,7 +61,7 @@ if answer_upper == 'Y' :
         print(bcolors.WARNING + "--You've awakened the arachnid Ophelia." + bcolors.ENDC)
 
         ##Capture user input 
-        fight = raw_input(bcolors.OKGREEN + "--She darts towards you, do you : \n 1. Dodge her advance \n 2. Attempt to draw your blade \n 3. Freeze in horror \n " + bcolors.ENDC)
+        fight = input(bcolors.OKGREEN + "--She darts towards you, do you : \n 1. Dodge her advance \n 2. Attempt to draw your blade \n 3. Freeze in horror \n " + bcolors.ENDC)
 
         ##Test user input among a set of conditionals
         if fight == str(1) :
@@ -76,6 +76,7 @@ if answer_upper == 'Y' :
             #######################################
 
             print("Joey is on the scene")
+            print("Cory made it")
 
             # First create a prompt for user input and store that input within a semantic variable 
             ### HINT: User input should be in the form of number options or a string literal of "Y" or "N"
