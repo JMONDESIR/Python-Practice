@@ -1,7 +1,4 @@
-# The point of this exercise is to examine conditional statement/logic flow
-# A large portion of programming and development is working in a team
-# Essentially you will be given a small portion of a larger project
-# This program is a conditional role-playing game through CLI (Command Line Interface)
+# The point of this exercise is to examine conditional statement/logic flow # A large portion of programming and development is working in a team # Essentially you will be given a small portion of a larger project # This program is a conditional role-playing game through CLI (Command Line Interface)
 # Each segment of the story is printed to the console (CLI) and progresses via user input ( "Y" / "N" )
 # Your task, should you choose to accept it, is outlined below
 # Be sure to study the code, as it has all of the answers already within it
@@ -66,32 +63,43 @@ if answer_upper == 'Y' :
         ##Test user input among a set of conditionals
         if fight == str(1) :
             print(bcolors.OKBLUE + "--You successfully avoided attack! \n You draw your blade and plunge it deep into Ophelia's thorax, rendering her dead." + bcolors.ENDC)
-            print(bcolors.BOLD + "--You obtain a vial of Arachnid Venom!".upper() + bcolors.ENDC)
-            print(bcolors.OKGREEN + "--You smash the hilt of your sword against the padlock of the chest revealing the contents. \n" + bcolors.ENDC)
-            print(bcolors.BOLD + "--You obtain a Helm of Lights Mercy!".upper() + bcolors.ENDC)
 
-
-            #######################################
-            ###### YOUR CODE BELOW THIS LINE ######
-            #######################################
-
-            print("Joey is on the scene")
-            print("Cory made it")
-
-            # First create a prompt for user input and store that input within a semantic variable 
-            ### HINT: User input should be in the form of number options or a string literal of "Y" or "N"
+            answer = input(bcolors.OKGREEN + "--Do you want to check the corpse of Ophelia? \n Y/N \n" + bcolors.ENDC)
+            if answer == "Y" :
+                print(bcolors.BOLD + "--You obtain a (L) vial of Arachnid Venom!".upper() + bcolors.ENDC)
+                print(bcolors.OKGREEN + "--You walk to the chest and smash the hilt of your sword against the padlock, revealing the contents. \n" + bcolors.ENDC)
+                print(bcolors.BOLD + "--You obtain a Helm of Lights Mercy!".upper() + bcolors.ENDC)
+                print(bcolors.BOLD + "--You obtain three broadhead arrows!".upper() + bcolors.ENDC)
             
-            # Next create a conditional statement
-            ### HINT: If testing for a number(int) input ensure that you are using the str(input) function to coerce data types
-            ### HINT: For a prompt that accepts only 2 responses, you only need to test logic for one
-            ### HINT: For a prompt that accepts multiple responses, you might save the one that ends the program for the else condition
+                #######################################
+                ###### YOUR CODE BELOW THIS LINE ######
+                #######################################
+
+                ##Multiple Choices and choice order##
+                print(bcolors.WARNING + "--Well done, warrior. You gather your wits and glance around the room. You notice a table in the corner. " + bcolors.ENDC)
+                choice = input(bcolors.OKGREEN + '--"I want to..." : \n 1. Walk to the table \n 2. Head towards the stairway to the next tier \n ' + bcolors.ENDC)
+
+                if choice == str(1) :
+                    print(bcolors.BOLD + "--You walk towards the table and see a small key with a star engraved on it".upper() + bcolors.ENDC)
+                    print(bcolors.WARNING + "--After gathering your wits, you glance around the room. " + bcolors.ENDC)
+                else :
+                    print("fuck off")
+                # First create a prompt for user input and store that input within a semantic variable 
+                ### HINT: User input should be in the form of number options or a string literal of "Y" or "N"
+                
+                # Next create a conditional statement
+                ### HINT: If testing for a number(int) input ensure that you are using the str(input) function to coerce data types
+                ### HINT: For a prompt that accepts only 2 responses, you only need to test logic for one
+                ### HINT: For a prompt that accepts multiple responses, you might save the one that ends the program for the else condition
 
 
-
-            #######################################
-            ###### YOUR CODE ABOVE THIS LINE ######
-            #######################################
-
+        
+                #######################################
+                ###### YOUR CODE ABOVE THIS LINE ######
+                #######################################
+            else :
+                print("Coward")
+                
         elif fight == str(2) :
             print(bcolors.FAIL + "--You couldn't draw your blade quick enough, Ophelia has rendered you lifeless. \n Farewell brave traveler." + bcolors.ENDC)
 
